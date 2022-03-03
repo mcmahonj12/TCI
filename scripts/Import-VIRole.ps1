@@ -35,7 +35,7 @@ function Import-VIRole {
             $content = Get-Content $_ -raw | ConvertFrom-Json
             $content.roles | Foreach-Object {
                 $Name = $_.Name
-                Write-Host $name
+                Write-Host "Creating or modifying VI role $name"
                 $RoleExists = Get-VIRole -Name $Name #-Server $vCenter -ErrorAction SilentlyContinue
                 <#if ($RoleExists -And (! $Overwrite)) {
                 Throw 'Role already exists.'
@@ -69,5 +69,6 @@ function Import-VIRole {
                 }
             }
         }
+        Write-Host "VI roles completed."
     }
 }

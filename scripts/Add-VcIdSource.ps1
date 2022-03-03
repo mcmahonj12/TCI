@@ -9,9 +9,17 @@
 
 [CmdletBinding()]
 Param(
+    [Parameter(Mandatory = $true, Position = 1, HelpMessage = 'vCenter Server to connect to SSO.')]
+    [ValidateNotNullorEmpty()]
+    [Alias("Server")]
+    [String]$ViServer,
+    [Parameter(Mandatory = $true, Position = 1, HelpMessage = 'Secure credential to authenticate to SSO.')]
+    [ValidateNotNullorEmpty()]
+    [Alias("Creds")]
+    [pscredential]$Credential,
     [Parameter(Mandatory = $true, Position = 1, HelpMessage = 'Path to the JSON file describing the role')]
     [ValidateNotNullorEmpty()]
-    [Alias("Permission")]
+    [Alias("Path")]
     [String]$FilePath
 )
 
@@ -33,9 +41,13 @@ Catch {
     Exit
 }
 
+Connect-SsoAdminServer -Server $ViServer -Credential $Credential -SkipCertificateCheck
+
 # Configure the ID sources.
 #$filePath = ".\config\global\vc\permissions\globalPermissions.json"
 $ldap =Get-Content -Raw $filePath | ConvertFrom-Json
 
 $ldap | Foreach-Object ($_) {
-Add-LDAPIdentitySource -Name $_.Name -DomainName $_.DomainName -DomainAlias $_.DomainAlias -PrimaryUrl $_.PrimaryUrl -BaseDNUsers $_.BaseDNUsers -BaseDNGroups $_.BaseDNGroups -Username $_.BindUser -Password "VMware1!"}
+Add-LDAPIdentitySource -Name $_.Name -DomainName $_.DomainName -DomainAlias $_.DomainAlias -PrimaryUrl $_.PrimaryUrl -BaseDNUsers $_.BaseDNUsers -BaseDNGroups $_.BaseDNGroups -Username $_.BindUser -Password $_.BindPassword}
+
+Disconnect-SsoAdminServer
