@@ -37,5 +37,5 @@ Catch {
 #$filePath = ".\config\global\vc\permissions\globalPermissions.json"
 $ldap =Get-Content -Raw $filePath | ConvertFrom-Json
 
-$ldap | Foreach ($_) {
+$ldap | Foreach-Object ($_) {
 Add-LDAPIdentitySource -Name $_.Name -DomainName $_.DomainName -DomainAlias $_.DomainAlias -PrimaryUrl $_.PrimaryUrl -BaseDNUsers $_.BaseDNUsers -BaseDNGroups $_.BaseDNGroups -Username $_.BindUser -Password "VMware1!"}
