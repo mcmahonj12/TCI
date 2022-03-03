@@ -1,0 +1,37 @@
+[
+    {
+        "entity": "Datacenters",
+        "principal": "dishwasher\\perm-mkt4-vc-administrators",
+        "group": true,
+        "propogate": true,
+        "role": "Admin"
+    },
+    {
+        "entity": "Datacenters",
+        "principal": "dishwasher\\perm-mkt4-vc-log insight",
+        "group": true,
+        "propogate": true,
+        "role": "Log Insight"
+    },
+    {
+        "entity": "Datacenters",
+        "principal": "dishwasher\\perm-mkt4-vc-tkg operator",
+        "group": true,
+        "propogate": true,
+        "role": "TKG Operator"
+    },
+    {
+        "entity": "Datacenters",
+        "principal": "dishwasher\\perm-mkt4-vc-cloudadmin",
+        "group": true,
+        "propogate": true,
+        "role": "CloudAdmin"
+    },
+    {
+        "entity": "Datacenters",
+        "principal": "dishwasher\\perm-mkt4-vc-infrastructure developer",
+        "group": true,
+        "propogate": true,
+        "role": "Infrastructure Developer"
+    }
+]
