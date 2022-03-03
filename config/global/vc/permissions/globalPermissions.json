@@ -1,38 +1,37 @@
-{
-    "permissions": [
-        {
-            "principals": [
-                {
-                    "entity": "Datacenters",
-                    "principal": "dishwasher\\perm-mkt1-vc-administrators",
-                    "group": "true",
-                    "roleName": "Admin"
-                },
-                {
-                    "entity": "Datacenters",
-                    "principal": "dishwasher\\perm-mkt1-vc-administrators",
-                    "group": "true",
-                    "roleName": "Log Insight"
-                },
-                {
-                    "entity": "Datacenters",
-                    "principal": "dishwasher\\perm-mkt1-vc-tkg operator",
-                    "group": "true",
-                    "roleName": "TKG Operator"
-                },
-                {
-                    "entity": "Datacenters",
-                    "principal": "perm-vmc-vc-cloudadmin",
-                    "group": "true",
-                    "roleName": "CloudAdmin"
-                },
-                {
-                    "entity": "Datacenters",
-                    "principal": "perm-mkt1-vc-infrastructure developer",
-                    "group": "true",
-                    "roleName": "Infrastructure Developer"
-                }
-            ]
-        }
-    ]
-}
+[
+    {
+        "entity": "Datacenters",
+        "principal": "dishwasher\\perm-mkt1-vc-administrators",
+        "group": true,
+        "propogate": true,
+        "role": "Admin"
+    },
+    {
+        "entity": "Datacenters",
+        "principal": "dishwasher\\perm-mkt1-vc-log insight",
+        "group": true,
+        "propogate": true,
+        "role": "Log Insight"
+    },
+    {
+        "entity": "Datacenters",
+        "principal": "dishwasher\\perm-mkt1-vc-tkg operator",
+        "group": true,
+        "propogate": true,
+        "role": "TKG Operator"
+    },
+    {
+        "entity": "Datacenters",
+        "principal": "dishwasher\\perm-mkt1-vc-cloudadmin",
+        "group": true,
+        "propogate": true,
+        "role": "CloudAdmin"
+    },
+    {
+        "entity": "Datacenters",
+        "principal": "dishwasher\\perm-mkt1-vc-infrastructure developer",
+        "group": true,
+        "propogate": true,
+        "role": "Infrastructure Developer"
+    }
+]

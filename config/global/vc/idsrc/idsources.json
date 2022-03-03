@@ -1,15 +1,14 @@
-{
-	"IdSources": [{
-			"Name": "dishwasher.cloud",
-			"DomainName": "dishwasher.cloud",
-			"DomainAlias": "dishwasher",
-			"PrimaryUrl": "ldap://dishwasher.cloud",
-			"FailoverUrl": "",
-			"BaseDNUsers": "ou=Users,ou=dishwasher,dc=dishwasher,dc=cloud",
-			"BaseDNGroups": "ou=Groups,ou=dishwasher,dc=dishwasher,dc=cloud",
-			"BindUser": "svc_mktvcldap@dishwasher.cloud",
-			"BindPassword": "",
-			"Certificates": ""
-		}
-	]
-}
+[
+	{
+		"Name": "dishwasher.cloud",
+		"DomainName": "dishwasher.cloud",
+		"DomainAlias": "dishwasher",
+		"PrimaryUrl": "ldap://dishwasher.cloud",
+		"FailoverUrl": "",
+		"BaseDNUsers": "ou=Users,ou=dishwasher,dc=dishwasher,dc=cloud",
+		"BaseDNGroups": "ou=Groups,ou=dishwasher,dc=dishwasher,dc=cloud",
+		"BindUser": "svc_mktvcldap@dishwasher.cloud",
+		"BindPassword": "",
+		"Certificates": ""
+	}
+]
