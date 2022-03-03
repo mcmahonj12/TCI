@@ -1,0 +1,14 @@
+[
+	{
+		"Name": "dishwasher.cloud",
+		"DomainName": "dishwasher.cloud",
+		"DomainAlias": "dishwasher",
+		"PrimaryUrl": "ldap://dishwasher.cloud",
+		"FailoverUrl": "",
+		"BaseDNUsers": "ou=Users,ou=dishwasher,dc=dishwasher,dc=cloud",
+		"BaseDNGroups": "ou=Groups,ou=dishwasher,dc=dishwasher,dc=cloud",
+		"BindUser": "svc_mktvcldap@dishwasher.cloud",
+		"BindPassword": "L@n@ its c@shm3r3 th3r3 @r3 rul3s",
+		"Certificates": ""
+	}
+]

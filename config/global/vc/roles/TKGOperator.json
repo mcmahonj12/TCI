@@ -1,0 +1,41 @@
+{
+	"product_description": "Minimum required prvileges required for the vSphere TKG Operator account to perform TKG cluster operations.",
+	"product_version": "7.0.x",
+	"reference_url": "https://docs.vmware.com/en/VMware-Tanzu-Kubernetes-Grid/1.5/vmware-tanzu-kubernetes-grid-15/GUID-mgmt-clusters-vsphere.html",
+	"vendor": "VMware",
+	"vcenter_schema": "7.0",
+    "roles":[
+        {
+            "name": "TKG Operator",
+            "privileges": [
+                "System.Anonymous",
+                "System.View",
+                "System.Read",
+                "Datastore.Browse",
+                "Datastore.FileManagement",
+                "Datastore.AllocateSpace",
+                "Network.Assign",
+                "VirtualMachine.Inventory.CreateFromExisting",
+                "VirtualMachine.Inventory.Delete",
+                "VirtualMachine.Interact.PowerOn",
+                "VirtualMachine.Interact.PowerOff",
+                "VirtualMachine.Config.AddExistingDisk",
+                "VirtualMachine.Config.AddNewDisk",
+                "VirtualMachine.Config.RemoveDisk",
+                "VirtualMachine.Config.CPUCount",
+                "VirtualMachine.Config.Memory",
+                "VirtualMachine.Config.AddRemoveDevice",
+                "VirtualMachine.Config.EditDevice",
+                "VirtualMachine.Config.Settings",
+                "VirtualMachine.Config.AdvancedConfig",
+                "VirtualMachine.Config.DiskExtend",
+                "VirtualMachine.Provisioning.DeployTemplate",
+                "Resource.AssignVMToPool",
+                "Sessions.ValidateSession",
+                "Sessions.GlobalMessage",
+                "VApp.Import",
+                "StorageProfile.View"
+            ]
+        }
+    ]
+}
