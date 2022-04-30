@@ -15,8 +15,17 @@ try {
 
 # Enable LLDP on all Distributed Switches.
 Write-Host "Enabling LLDP on Distributed Switches" -ForegroundColor Magenta
-Get-VDSwitch | Set-VDSwitch -LinkDiscoveryProtocol LLDP -LinkDiscoveryProtocolOperation Listen
-Write-Host "Completed configuring LLDP on DVS. Please check the console for errors." -ForegroundColor -Green
+$tasks = Get-VDSwitch | Set-VDSwitch -LinkDiscoveryProtocol LLDP -LinkDiscoveryProtocolOperation Listen -RunAsync:$true
+Write-Host "Completed configuring LLDP on DVS. Please check the console for errors." -ForegroundColor Green
+
+Start-Sleep -Seconds 5
+
+Write-Host "Displaying all DVS LLDP config task status." -ForegroundColor Magenta
+$tasks
+
+# Show DVS LLDP configuration
+Write-Host "Displaying all DVS LLDP current configs." -ForegroundColor Magenta
+Get-VDSwitch | Select-Object Name, LinkDiscoveryProtocol, LinkDiscoveryProtocolOperation | Format-Table -AutoSize
 
 # Clean up the VI session.
 Write-Host "Disconnecting from vCenter Server $vcenter" -ForegroundColor Green
