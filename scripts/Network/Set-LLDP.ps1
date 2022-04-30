@@ -20,4 +20,4 @@ Write-Host "Completed configuring LLDP on DVS. Please check the console for erro
 
 # Clean up the VI session.
 Write-Host "Disconnecting from vCenter Server $vcenter" -ForegroundColor Green
-Disconnect-VIServer
+Disconnect-VIServer -Confirm:$false
