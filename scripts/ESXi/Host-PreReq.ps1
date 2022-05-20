@@ -85,6 +85,20 @@ Write-Host "Attempting to connect to host" -ForegroundColor Green
         Write-Host "Could not change the SSH host policy to 'Start and stop with host'"
     }
 
+# Check if the ESXi host is in Maintenance Mode. If so, try to exit Maintenance Mode.
+    # Check the SSH service policy is set to start and stop with the host.
+    Write-Host "Checking to see if the host is in Maintenance Mode." -ForegroundColor Green
+    try {
+        If ($mm = Get-VMHost -State Maintenance) {
+            Write-Host "The host is in Maintenance Mode. Exiting Maintenance Mode." -ForegroundColor Magenta
+            Set-VMHost $mm -State Connected
+        }
+    }
+    catch {
+        Write-Host "HOST_CHECK_HOST_SSH"
+        Write-Host "Could not change the SSH host policy to 'Start and stop with host'"
+    }  
+
 }
 
 HOST_CHECK_SERVER_VENDOR
