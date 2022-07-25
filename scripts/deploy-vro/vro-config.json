@@ -11,10 +11,10 @@
     "Network": {
         "PortGroup": "workloadMgmt",
         "IPProtocol": "IPv4",
-        "IPAddress": "10.202.248.84",
+        "IPAddress": "172.202.248.84",
         "Netmask": "255.255.252.0",
-        "Gateway": "10.202.249.253",
-        "DNSServers": "10.202.248.51",
+        "Gateway": "172.202.249.253",
+        "DNSServers": "172.202.248.51",
         "Domain": "lab2.frankenlab.foobar",
         "SearchPath": "frankenlab.foobar",
         "NTPServers": "time.vmware.com"
