@@ -1,0 +1,30 @@
+{
+    "vSphere": {
+        "VMHost": "esx15.frankenlab.foobar",
+        "Datastore": "frankenDatastore",
+        "OvaPath": "D:\\depot\\platforms\\tcp\\vro\\O11N_VA-8.7.0.21169-19508507_OVF10.ova"
+        },
+    "VM": {
+        "VMName": "vrocdc01",
+        "Folder": ""
+    },
+    "Network": {
+        "PortGroup": "workloadMgmt",
+        "IPProtocol": "IPv4",
+        "IPAddress": "172.202.248.84",
+        "Netmask": "255.255.252.0",
+        "Gateway": "172.202.249.253",
+        "DNSServers": "172.202.248.51",
+        "Domain": "lab2.frankenlab.foobar",
+        "SearchPath": "frankenlab.foobar",
+        "NTPServers": "time.vmware.com"
+    },
+    "Common": {
+        "FIPSMode": "disabled",
+        "k8s_cluster_cidr": "10.244.0.0/22",
+        "k8s_service_cidr": "10.244.0.0/22",
+        "Hostname": "tca.frankenlab.foobar",
+        "Root_password": "VMware1!VMware1!",
+        "SSH_Enabled": "True"
+    }
+}
