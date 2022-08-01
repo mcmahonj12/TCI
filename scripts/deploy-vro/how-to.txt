@@ -1,0 +1,12 @@
+How to use this script to deploy a vRO appliance from JSON.
+
+1. Download the script folder to a system which can access the target vCenter Server where vRO will be deployed. i.e. C:\Scripts\Deploy-vRO.
+2. Open the vrocdc01-config.json file. Update the properties with the deployment data that matches your deployment requirements.
+3. Once the JSON has been updated, save the file for deployment usage.
+4. Open PowerShell.
+5. In the PowerShell CLI type "cd C:\Scripts\Deploy-vRO" and hit enter. Substitute C:\Scripts\Deploy-vRO with the desired path as necessary.
+6. At the command prompt type ". .\Deploy-vRO.ps1" and hit enter. This will add the function to the PowerShell session.
+7. Connect to the target vCenter Server with an administrator account; "Connect-VIServer -Server <target_vcenter_fqdn> -Credential (Get-Credential)"
+8. Type "Deploy-vRO -JSONPath Deploy-vRO -JSONPath C:\Scripts\deploy-vro\vrocdc01-config.json" or change the JSON path to the location of your vRO config you created in step 2.
+9. Monitor the deployment status. Once complete, the vRO appliance will power on. 
+10. Log into the vRO appliance Control Center to complete setup.
