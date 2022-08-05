@@ -19,7 +19,7 @@ Write-Host "Testing host DNS resolution" -ForegroundColor Green
     }
     catch {
         Write-Host "HOST_CHECK_DNS_HOST_A"
-        Write-Host "Could not resolve HOST A record for host $hosts"
+        Write-Host "Could not resolve HOST A record for host $_"
     }
     Write-Host "HOST A record check succeeded"
 
