@@ -1,0 +1,42 @@
+{
+    "vSphere": {
+        "VMHost": "esx15.frankenlab.foobar",
+        "Datastore": "frankenDatastore",
+        "OvaPath": "D:\\depot\\platforms\\tcp\\tca\\VMware-Telco-Cloud-Automation-2.1.0-20142564.ova"
+        },
+    "VM": {
+        "VMName": "tcpcdc01",
+        "Folder": ""
+    },
+    "Network": {
+        "PortGroup": "workloadMgmt",
+        "IPProtocol": "IPv4",
+        "DHCP_Enabled" : "False",
+        "IPAddress": "172.202.248.83",
+        "Prefix": "23",
+        "Gateway": "172.202.249.253",
+        "DNSServers": "172.202.248.51",
+        "Domain": "lab2.frankenlab.foobar",
+        "SearchPath": "frankenlab.foobar",
+        "NTPServers": "time.vmware.com"
+    },
+    "Routes":{
+        "staticNet1" : {
+            "gatewayIp" : "",
+            "network" : "",
+            "networkPrefix" : ""
+        },
+        "staticNet2" : {
+            "gatewayIp" : "",
+            "network" : "",
+            "networkPrefix" : ""
+        }
+    },
+    "Common": {
+        "applianceRole" : "ControlPlane",
+        "hostname" : "tcpcdco1",
+        "root_password" : "VMware1!VMware1!",
+        "mgr_cli_password" : "VMware1!VMware1!",
+        "ssh_enabled" : "True"
+    }
+}
