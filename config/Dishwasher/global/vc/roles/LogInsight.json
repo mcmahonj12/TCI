@@ -1,0 +1,21 @@
+{
+	"product_description": "vRealize Log Insight minimum vCenter Server privileges in vCenter Server.",
+	"product_version": "7.0.x",
+	"reference_url": "https://docs.vmware.com/en/vRealize-Log-Insight/8.6/com.vmware.log-insight.administration.doc/GUID-09F7B992-D7F4-40B6-8F16-4B5A6E9BEC67.html",
+	"vendor": "VMware",
+	"vcenter_schema": "7.0",
+    "roles":[
+        {
+            "name": "Log Insight",
+            "privileges": [
+                "System.Anonymous",
+                "System.View",
+                "System.Read",
+                "Host.Config.NetService",
+                "Host.Config.Network",
+                "Host.Config.AdvancedConfig",
+                "Host.Config.Settings"
+            ]
+        }
+    ]
+}

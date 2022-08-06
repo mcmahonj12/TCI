@@ -1,0 +1,88 @@
+Service_Accounts:
+  svc_use2vctrmnoldap:
+    first_name: VMC MnO LDAP
+    last_name: Service Account
+    display_name: VMC MnO LDAP Service Account
+    account_name: svc_use2vctrmnoldap
+    member_of:
+      - Domain Users
+  svc_use2vctrmp01ldap:
+    first_name: Market Pod 1 VC LDAP
+    last_name: Service Account
+    display_name: Market Pod 1 VC LDAP Service Account
+    account_name: svc_use2vctrmp01ldap
+    member_of:
+      - Domain Users
+  svc_use2vromp01:
+    first_name: Market Pod 1 vRO
+    last_name: Service Account
+    display_name: Market Pod 1 vRO Service Account
+    account_name: svc_use2vromp01
+    member_of:
+      - role-use2-mp01-vc-administrators
+  svc_use2vrlimp01:
+    first_name: Market Pod 1 vRLI
+    last_name: Service Account
+    display_name: Market Pod 1 vRLI Service Account
+    account_name: svc_use2vrlimp01
+    member_of:
+      - role-use2-mp01-vc-log insight
+  svc_use2vropsmno:
+    first_name: US-WEST-2 MnO vROPs
+    last_name: Service Account
+    display_name: US-WEST-2 MnO vROPs Service Account
+    account_name: svc_use2vropsmno
+    member_of:
+      - role-use2-mno-vc-cloudadmin
+  svc_use2vropsmp01:
+    first_name: Market Pod 1 vROPs
+    last_name: Service Account
+    display_name: Market Pod 1 vROPs Service Account
+    account_name: svc_use2vropsmp01
+    member_of:
+      - role-use2-mp01-vc-administrators
+  svc_use2vidmldap:
+    first_name: US-WEST-2 vIDM LDAP
+    last_name: Service Account
+    display_name: US-WEST-2 vIDM LDAP Service Account
+    account_name: svc_use2vidmldap
+    member_of:
+      - Domain Users
+  svc_use2cicd01:
+    first_name: US-WEST-2 CI/CD
+    last_name: Service Account
+    display_name: US-WEST-2 CI/CD Service Account
+    account_name: svc_use2cicd01
+    member_of:
+      - role-use2-global-service account
+  svc_use2tkgop01:
+    first_name: US-WEST-2 TKG
+    last_name: Operator Account
+    display_name: US-WEST-2 TKG Operator Account
+    account_name: svc_use2tkgop01
+    member_of:
+      - role-use2-global-tkg-operator
+  svc_use2vrlildap:
+    first_name: vRLI LDAP
+    last_name: Service Account
+    display_name: vRLI LDAP Service Account
+    account_name: svc_use2tkgop01
+    member_of:
+      - Domain Users
+  svc_use2tcammp01:
+    first_name: Market Pod 1 TCA
+    last_name: Service Account
+    display_name: Market Pod 1 TCA Service Account
+    account_name: svc_use2tcammp01
+    member_of:
+      - role-use2-mp01-vc-administrators
+      - role-use2-mp01-vro-administrators
+  svc_use2tcam01:
+    first_name: US-WEST-2 TCA
+    last_name: Service Account
+    display_name: US-WEST-2 TCA Service Account
+    account_name: svc_use2tcam01
+    member_of:
+      - role-use2-global-vc-administrators
+      - role-use2-global-vro-administrators
+      - perm-use2-mp01-vc-cloudadmingroup

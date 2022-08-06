@@ -1,0 +1,94 @@
+roles:
+  - role-use2-global-admin
+  - role-use2-global-developer
+  - role-use2-global-service account
+  - role-use2-global-tca-administrators
+  - role-use2-global-vc-administrators
+  - role-use2-global-vc-cloudadmin
+  - role-use2-global-vc-infrastructure developer
+  - role-use2-global-tkg-operator
+  - role-use2-global-vro-administrators
+  - role-use2-global-vrs-administrators
+  - role-use2-mno-tca-administrators
+  - role-use2-mno-vc-cloudadmin
+  - role-use2-mno-vc-infrastructure developer
+  - role-use2-mp01-vc-administrators
+  - role-use2-mp01-vc-cloudadmin
+  - role-use2-mp01-vc-infrastructure developer
+  - role-use2-mp01-vc-tkg operator
+  - role-use2-mp01-vc-log insight
+  - role-use2-mp01-vro-administrators
+application:
+  mno:
+    perm-use2-mno-vc-cloudadmin:
+      name: perm-use2-mno-vc-cloudadmin
+      members:
+        - role-use2-global-service account
+        - role-use2-global-vc-cloudadmin
+        - role-use2-mno-vc-cloudadmin
+    perm-use2-mno-vc-infrastructure developer:
+      name: perm-use2-mno-vc-infrastructure developer
+      members:
+        - role-use2-global-vc-infrastructure developer
+        - role-use2-mno-vc-infrastructure developer
+    perm-use2-mno-vrli-super:
+      name: perm-use2-mno-vrli-super user
+      members:
+        - role-use2-global-admin
+        - role-use2-global-developer
+        - role-use2-global-vrs-administrators
+    perm-use2-mno-vrop-administrators:
+      name: perm-use2-mno-vrop-administrators
+      members:
+        - role-use2-global-vrs-administrators
+    perm-use2-mno-vrslcm-cloudadmin:
+      name: perm-use2-mno-vrslcm-cloudadmin
+      members:
+        - role-use2-global-vrs-administrators
+    perm-use2-mno-tca-administrators:
+      name: perm-use2-mno-tca-administrators
+      members:
+        - role-use2-global-admin
+        - role-use2-global-tca-administrators
+        - role-use2-mno-tca-administrators
+    perm-use2-mno-tca-infrastructure administrators:
+      name: perm-use2-mno-tca-infrastructure administrators
+      members:
+        - null
+  mp01:
+    perm-use2-mp01-vc-cloudadmingroup:
+      name: perm-use2-mp01-vc-cloudadmingroup
+      members:
+        - svc_use2tcam01
+    perm-use2-mp01-vc-administrators:
+      name: perm-use2-mp01-vc-administrators
+      members:
+        - role-use2-global-service account
+        - role-use2-global-vc-administrators
+        - role-use2-mp01-vc-administrators
+    perm-use2-mp01-vc-cloudadmin:
+      name: perm-use2-mp01-vc-cloudadmin
+      members:
+        - role-use2-global-vc-cloudadmin
+        - role-use2-mp01-vc-cloudadmin
+    perm-use2-mp01-vc-infrastructure developer:
+      name: perm-use2-mp01-vc-infrastructure developer
+      members:
+        - role-use2-global-developer
+        - role-use2-global-vc-infrastructure developer
+        - role-use2-mp01-vc-infrastructure developer
+    perm-use2-mp01-vc-log insight:
+      name: perm-use2-mp01-vc-log insight
+      members:
+        - role-use2-mp01-vc-log insight
+    perm-use2-mp01-vc-tkg operator:
+      name: perm-use2-mp01-vc-tkg operator
+      members:
+        - role-use2-global-tkg-operator
+        - role-use2-mp01-vc-tkg operator
+    perm-use2-mp01-vro-administrators:
+      name: perm-use2-mp01-vro-administrators
+      members:
+        - role-use2-global-developer
+        - role-use2-global-vro-administrators
+        - role-use2-mp01-vro-administrators
