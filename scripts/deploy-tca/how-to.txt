@@ -1,0 +1,15 @@
+How to use this script to deploy a tca appliance from JSON.
+
+1. Download the script folder to a system which can access the target vCenter Server where tca will be deployed. i.e. C:\Scripts\Deploy-tca.
+2. Open the tcacdc01-config.json file. Update the properties with the deployment data that matches your deployment requirements.
+3. Once the JSON has been updated, save the file for deployment usage.
+4. Open PowerShell.
+5. In the PowerShell CLI type "cd C:\Scripts\Deploy-TCA" and hit enter. Substitute C:\Scripts\Deploy-tca with the desired path as necessary.
+6. At the command prompt type ". .\Deploy-tca.ps1" and hit enter. This will add the function to the PowerShell session.
+7. Connect to the target vCenter Server with an administrator account; "Connect-VIServer -Server <target_vcenter_fqdn> -Credential (Get-Credential)"
+8. Type "Deploy-tca -JSONPath Deploy-tca -JSONPath C:\Scripts\deploy-tca\tcacdc01-config.json" or change the JSON path to the location of your tca config you created in step 2.
+9. Monitor the deployment status. Once complete, the tca appliance will power on. 
+10. Log into the tca appliance Control Center to complete setup.
+
+NOTE: This script may also be used to deploy the Control Plane appliance. Simply 
+use a different config file for the Control Plane deployment.
