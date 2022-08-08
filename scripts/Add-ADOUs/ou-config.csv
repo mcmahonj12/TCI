@@ -1,0 +1,11 @@
+﻿Name,Path
+dishwasher,"DC=frankenlab,DC=foobar"
+Users,"OU=frankenlab,DC=frankenlab,DC=foobar"
+Groups,"OU=frankenlab,DC=frankenlab,DC=foobar"
+Servers,"OU=frankenlab,DC=frankenlab,DC=foobar"
+Service Accounts,"OU=Users,OU=frankenlab,DC=frankenlab,DC=foobar"
+Administrators,"OU=Users,OU=frankenlab,DC=frankenlab,DC=foobar"
+Developers,"OU=Users,OU=frankenlab,DC=frankenlab,DC=foobar"
+Operations,"OU=Users,OU=frankenlab,DC=frankenlab,DC=foobar"
+Application Groups,"OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar"
+Role Groups,"OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar"
