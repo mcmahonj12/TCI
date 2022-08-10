@@ -17,6 +17,9 @@ function Add-ADOUs {
     
     .LINK
     This function was created and tested using Microsoft Windows Server 2022 with a Domain Level of 2016.
+	
+	.EXAMPLE
+    Add-Add-ADOUs -ADServer 172.16.0.10 -Credential (Get-Credential) -CSVPath C:\Configs\ou-config.csv
     
     .PARAMETER CSVPath
     CSVPath: string
@@ -47,5 +50,5 @@ function Add-ADOUs {
         throw $error[0].Exception.Message
     }
 
-    $ous | ForEach-Object {New-ADOrganizationalUnit -Server $server -Credential $creds -Name $_.name -Path $_.path}
+    $ous | ForEach-Object {New-ADOrganizationalUnit -Server $adserver -Credential $credential -Name $_.name -Path $_.path}
 }
