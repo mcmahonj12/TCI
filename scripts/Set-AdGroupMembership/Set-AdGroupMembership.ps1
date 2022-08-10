@@ -48,7 +48,7 @@
     }
 
     $groups | ForEach-Object { if ($_.members){
-            Add-ADGroupMember -Server $ADServer -Credential $creds -Identity $_.Name -Members $_.members
+            Add-ADGroupMember -Server $ADServer -Credential $credential -Identity $_.Name -Members $_.members
         }
     }
 }

@@ -47,5 +47,5 @@
         throw $error[0].Exception.Message
     }
 
-    $groups | ForEach-Object {New-ADGroup -Server $ADServer -Credential $creds -Name $_.name -Path $_.path -Description $_.description -GroupScope $_.scope}
+    $groups | ForEach-Object {New-ADGroup -Server $ADServer -Credential $credential -Name $_.name -Path $_.path -Description $_.description -GroupScope $_.scope}
     }
