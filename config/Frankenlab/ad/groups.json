@@ -1,0 +1,316 @@
+[
+  {
+    "Name": "role-usw2-global-admin",
+    "Path": "OU=Role Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": ""
+  },
+  {
+    "Name": "role-usw2-global-developer",
+    "Path": "OU=Role Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": ""
+  },
+  {
+    "Name": "role-usw2-global-service account",
+    "Path": "OU=Role Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": ""
+  },
+  {
+    "Name": "role-usw2-global-tca-administrators",
+    "Path": "OU=Role Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": ""
+  },
+  {
+    "Name": "role-usw2-global-vc-administrators",
+    "Path": "OU=Role Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": ""
+  },
+  {
+    "Name": "role-usw2-global-vc-cloudadmin",
+    "Path": "OU=Role Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": ""
+  },
+  {
+    "Name": "role-usw2-global-vc-infrastructure developer",
+    "Path": "OU=Role Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": ""
+  },
+  {
+    "Name": "role-usw2-global-tkg-operator",
+    "Path": "OU=Role Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": ""
+  },
+  {
+    "Name": "role-usw2-global-vro-administrators",
+    "Path": "OU=Role Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": ""
+  },
+  {
+    "Name": "role-usw2-global-vrs-administrators",
+    "Path": "OU=Role Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": ""
+  },
+  {
+    "Name": "role-usw2-mno-tca-administrators",
+    "Path": "OU=Role Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": ""
+  },
+  {
+    "Name": "role-usw2-mno-vc-cloudadmin",
+    "Path": "OU=Role Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": ""
+  },
+  {
+    "Name": "role-usw2-mno-vc-infrastructure developer",
+    "Path": "OU=Role Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": ""
+  },
+  {
+    "Name": "role-usw2-mp01-vc-administrators",
+    "Path": "OU=Role Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": ""
+  },
+  {
+    "Name": "role-usw2-mp01-vc-cloudadmin",
+    "Path": "OU=Role Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": ""
+  },
+  {
+    "Name": "role-usw2-mp01-vc-infrastructure developer",
+    "Path": "OU=Role Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": ""
+  },
+  {
+    "Name": "role-usw2-mp01-vc-tkg operator",
+    "Path": "OU=Role Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": ""
+  },
+  {
+    "Name": "role-usw2-mp01-vc-log insight",
+    "Path": "OU=Role Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": ""
+  },
+  {
+    "Name": "role-usw2-mp01-vro-administrators",
+    "Path": "OU=Role Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": ""
+  },
+  {
+    "Name": "perm-usw2-mno-vc-cloudadmin",
+    "Path": "OU=Application Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": "Grants limited admin permissions to the SDDC vCenter Server.",
+    "Members": [
+      "role-usw2-global-service account",
+      "role-usw2-global-vc-cloudadmin",
+      "role-usw2-mno-vc-cloudadmin"
+   ]
+  },
+  {
+    "Name": "perm-usw2-mno-vc-infrastructure developer",
+    "Path": "OU=Application Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": "Custom role granted limited deployment and management access.",
+    "Members": [
+      "role-usw2-global-vc-infrastructure developer",
+      "role-usw2-mno-vc-infrastructure developer"
+   ]
+  },
+  {
+    "Name": "perm-usw2-mno-tca-administrators",
+    "Path": "OU=Application Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": "Administrator permissions to the SDDC TCA instance.",
+    "Members": [
+      "role-usw2-global-admin",
+      "role-usw2-global-tca-administrators",
+      "role-usw2-mno-tca-administrators"
+   ]
+  },
+  {
+    "Name": "perm-usw2-mno-tca-infrastructure administrators",
+    "Path": "OU=Application Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": "Administrator permissions to the SDDC TCA instance. Enables removing sysadmin privileges once Infrastructre Automation privileges are available separately.",
+    "Members": [
+   ]
+  },
+  {
+    "Name": "perm-usw2-mp01-vc-cloudadmingroup",
+    "Path": "OU=Application Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": "Grants access to advanced VMC infrastructure views. Added to SSO group CloudAdminGroup.",
+    "Members": [
+   ]
+  },
+  {
+    "Name": "perm-usw2-mp01-vc-administrators",
+    "Path": "OU=Application Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": "Administrator permissions to the Market Pod 1 vCenter Server.",
+    "Members": [
+      "role-usw2-global-service account",
+      "role-usw2-global-vc-administrators",
+      "role-usw2-mp01-vc-administrators"
+   ]
+  },
+  {
+    "Name": "perm-usw2-mp01-vc-cloudadmin",
+    "Path": "OU=Application Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": "Reduced administrator permissions to match VMC.",
+    "Members": [
+      "role-usw2-global-vc-cloudadmin",
+      "role-usw2-mp01-vc-cloudadmin"
+   ]
+  },
+  {
+    "Name": "perm-usw2-mp01-vc-infrastructure developer",
+    "Path": "OU=Application Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": "Limited permissions to the Market Pod 1 vCenter Server.",
+    "Members": [
+      "role-usw2-global-developer",
+      "role-usw2-global-vc-infrastructure developer",
+      "role-usw2-mp01-vc-infrastructure developer"
+   ]
+  },
+  {
+    "Name": "perm-usw2-mp01-vc-log insight",
+    "Path": "OU=Application Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": "Minimum permissions for vRealize Log Insight to configure log collection. https://docs.vmware.com/en/vRealize-Log-Insight/8.6/com.vmware.log-insight.administration.doc/GUID-09F7B992-D7F4-40B6-8F16-4B5A6E9BEC67.html",
+    "Members": [
+      "role-usw2-mp01-vc-log insight"
+   ]
+  },
+  {
+    "Name": "perm-usw2-mp01-vc-tkg operator",
+    "Path": "OU=Application Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": "Grants minimum permissions for a TKG operator service account to perform actions against vCenter Server objects. https://kb.vmware.com/s/article/79984.",
+    "Members": [
+      "role-usw2-global-tkg-operator",
+      "role-usw2-mp01-vc-tkg operator"
+   ]
+  },
+  {
+    "Name": "perm-usw2-mp01-vro-administrators",
+    "Path": "OU=Application Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": "Adminitrator permissions to the Market Pod 1 vRO instance.",
+    "Members": [
+      "role-usw2-global-developer",
+      "role-usw2-global-vro-administrators",
+      "role-usw2-mp01-vro-administrators"
+   ]
+  },
+  {
+    "Name": "perm-usw2-mno-vidm-administrators",
+    "Path": "OU=Application Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": "Administrator privilages to Vmware Identity Manager",
+    "Members":[
+      "role-usw2-global-vrs-administrators"
+    ]
+  },
+  {
+    "Name": "perm-usw2-mno-vrslcm-administrators",
+    "Path": "OU=Application Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": "Administrator permissions to vRSLCM to manage product configurations and deployments.",
+    "Members":[
+      "role-usw2-global-vrs-administrators"
+    ]
+  },
+  {
+    "Name": "perm-usw2-mno-vrops-administrators",
+    "Path": "OU=Application Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": "Administrator privileges to vRealize Operations Manager.",
+    "Members":[
+      "role-usw2-global-vrs-administrators"
+    ]
+  },
+  {
+    "Name": "perm-usw2-mno-vrli-administrators",
+    "Path": "OU=Application Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": "Administrator privileges to vRealize Log Insight.",
+    "Members":[
+      "role-usw2-global-vrs-administrators"
+    ]
+  },
+  {
+    "Name": "perm-usw2-mp01-vrli-administrators",
+    "Path": "OU=Application Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": "Administrator privileges to vRealize Log Insight.",
+    "Members":[
+      "role-usw2-global-vrs-administrators"
+    ]
+  },
+  {
+    "Name": "perm-usw2-mno-vrni-administrators",
+    "Path": "OU=Application Groups,OU=Groups,OU=frankenlab,DC=frankenlab,DC=foobar",
+    "Scope": "DomainLocal",
+    "Category": "Security",
+    "Description": "Administrator privileges to vRealize Network Insight.",
+    "Members":[
+      "role-usw2-global-vrs-administrators"
+    ]
+  }
+ ]
