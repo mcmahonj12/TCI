@@ -86,28 +86,28 @@ vcsa                 PoweredOff 4        19.000
 Updating OVF Properties ...
 vcsa                 PoweredOff 4        19.000
 vcsa                 PoweredOn  4        19.000
-Will now attempt to connect to vcsa.frankenlab.foobar  to validate it has come online properly.
-vcsa.frankenlab.foobar is not currently available. Retrying in 60 seconds.
-vcsa.frankenlab.foobar is not currently available. Retrying in 60 seconds.
-vcsa.frankenlab.foobar is not currently available. Retrying in 60 seconds.
-vcsa.frankenlab.foobar is not currently available. Retrying in 60 seconds.
-vcsa.frankenlab.foobar is not currently available. Retrying in 60 seconds.
-vcsa.frankenlab.foobar is not currently available. Retrying in 60 seconds.
-vcsa.frankenlab.foobar is not currently available. Retrying in 60 seconds.
-vcsa.frankenlab.foobar is not currently available. Retrying in 60 seconds.
-vcsa.frankenlab.foobar is not currently available. Retrying in 60 seconds.
-vcsa.frankenlab.foobar is not currently available. Retrying in 60 seconds.
+Will now attempt to connect to vcsa.fartknocker.org  to validate it has come online properly.
+vcsa.fartknocker.org is not currently available. Retrying in 60 seconds.
+vcsa.fartknocker.org is not currently available. Retrying in 60 seconds.
+vcsa.fartknocker.org is not currently available. Retrying in 60 seconds.
+vcsa.fartknocker.org is not currently available. Retrying in 60 seconds.
+vcsa.fartknocker.org is not currently available. Retrying in 60 seconds.
+vcsa.fartknocker.org is not currently available. Retrying in 60 seconds.
+vcsa.fartknocker.org is not currently available. Retrying in 60 seconds.
+vcsa.fartknocker.org is not currently available. Retrying in 60 seconds.
+vcsa.fartknocker.org is not currently available. Retrying in 60 seconds.
+vcsa.fartknocker.org is not currently available. Retrying in 60 seconds.
 Successfully connected to vCenter Server
 
 IsConnected   : True
-Id            : /VIServer=vsphere.local\administrator@vcsa.frankenlab.foobar:443/
-ServiceUri    : https://vcsa.frankenlab.foobar/sdk
+Id            : /VIServer=vsphere.local\administrator@vcsa.fartknocker.org:443/
+ServiceUri    : https://vcsa.fartknocker.org/sdk
 SessionSecret : "0c72c798fc6db5c33976c586d4d2acfeda71bd78"
-Name          : vcsa.frankenlab.foobar
+Name          : vcsa.fartknocker.org
 Port          : 443
 SessionId     : "0c72c798fc6db5c33976c586d4d2acfeda71bd78"
 User          : VSPHERE.LOCAL\Administrator
-Uid           : /VIServer=vsphere.local\administrator@vcsa.frankenlab.foobar:443/
+Uid           : /VIServer=vsphere.local\administrator@vcsa.fartknocker.org:443/
 Version       : 7.0.3
 Build         : 20395099
 ProductLine   : vpx
