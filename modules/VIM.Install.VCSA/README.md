@@ -120,3 +120,8 @@ ExtensionData : VMware.Vim.ServiceInstance
 PS C:\Windows\system32>
 ```
 9. Wait 5 additional minutes before attempting to log into the UI as the Web Service is usually still starting after the API service is available. From this point additional API based configurations such as creating roles, datacenters, folders, etc. can begin.
+
+# Credits
+Additional credit must be given to some very helpful blogs and tools that made creating this module much easier.
+- William Lam: https://williamlam.com/2017/10/updating-ovf-properties-for-a-vm-using-vsphere-api-and-powercli.html
+- Christophe Calvet: http://www.thecrazyconsultant.com/Get-OvfConfiguration_on_steroids
