@@ -1,35 +1,35 @@
 [
     {
         "entity": "Datacenters",
-        "principal": "frankenlab\\perm-mkt1-vc-administrators",
+        "principal": "frankenlab\\perm-mp01-vc-administrators",
         "group": true,
         "propogate": true,
         "role": "Admin"
     },
     {
         "entity": "Datacenters",
-        "principal": "frankenlab\\perm-mkt1-vc-log insight",
+        "principal": "frankenlab\\perm-mp01-vc-log insight",
         "group": true,
         "propogate": true,
         "role": "Log Insight"
     },
     {
         "entity": "Datacenters",
-        "principal": "frankenlab\\perm-mkt1-vc-tkg operator",
+        "principal": "frankenlab\\perm-mp01-vc-tkg operator",
         "group": true,
         "propogate": true,
         "role": "TKG Operator"
     },
     {
         "entity": "Datacenters",
-        "principal": "frankenlab\\perm-mkt1-vc-cloudadmin",
+        "principal": "frankenlab\\perm-mp01-vc-cloudadmin",
         "group": true,
         "propogate": true,
         "role": "CloudAdmin"
     },
     {
         "entity": "Datacenters",
-        "principal": "frankenlab\\perm-mkt1-vc-infrastructure developer",
+        "principal": "frankenlab\\perm-mp01-vc-infrastructure developer",
         "group": true,
         "propogate": true,
         "role": "Infrastructure Developer"
