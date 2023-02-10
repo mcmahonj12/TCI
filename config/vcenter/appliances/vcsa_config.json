@@ -3,20 +3,20 @@
 	"new_vcsa": {
 		"vc": {
 
-			"hostname": "vcscdc01.lab2.frankenlab.foobar",
+			"hostname": "vcenter.fartknocker.org",
 			"username": "administrator@vsphere.local",
-			"password": "b0ldStr@t3gy!",
-			"deployment_network": "sfo-m01-vcscdc01-cs-workload-vds01-management",
+			"password": "VMware1!",
+			"deployment_network": "management-pg",
 			"ip_protocol": "IPv4",
 			"datacenter": [
-				"Frankenlab2"
+				"Highland"
 			],
-			"datastore": "sfo-m01-vcscdc01-cs-workload-vsan01",
+			"datastore": "WorkloadDatastore",
 			"vmhost": "cs-workload",
 			"target": [
 				"cs-workload",
 				"Resources",
-				"ran-rp-001"
+				"rp01"
 			],
 			"vm_folder": "vcenter"
 		},
@@ -28,17 +28,17 @@
 		"network": {
 			"ip_family": "ipv4",
 			"mode": "static",
-			"system_name": "vcsa.frankenlab.foobar",
-			"ip": "10.202.248.59",
+			"system_name": "vcsa.fartknocker.org",
+			"ip": "172.202.248.59",
 			"prefix": "23",
-			"gateway": "10.202.249.253",
-			"dns_servers": "10.202.248.51",
-			"domain": "frankenlab.foobar",
-			"searchpath": "frankenlab.foobar"
+			"gateway": "172.202.249.253",
+			"dns_servers": "172.202.248.51",
+			"domain": "fartknocker.org",
+			"searchpath": "fartknocker.org"
 		},
 		"os": {
 			"password": "VMware1!",
-			"ntp_servers": "time.vmware.com",
+			"ntp_servers": "time.google.com",
 			"ssh_enable": true
 		},
 		"sso": {
