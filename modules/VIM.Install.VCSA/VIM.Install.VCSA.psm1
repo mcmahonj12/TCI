@@ -134,7 +134,7 @@ Install-vCSA -JSONPath $file -$OVAName "vCenter-Server-Appliance-7"
 		}
 	}
 
-	$Global:ErrorActionPreference = ”Stop”
+	$ErrorActionPreference = 'Stop'
 	
 	# Get JSON parameters from the specified config file which should be set in the OVF parameters hashtable.
 	# If the path does not exist or the path is not a JSON exit the script with an error.
