@@ -10,6 +10,9 @@ Install-vCSA solves this problem by enabling the ability to load a module into a
 
 The module has a 25 minute timeout built into it. The timeout is so long because it can take as long as 20 minutes to perform a full configuration or the appliance.
 
+# Support
+This module is not supported by VMware or myself. Itmay not be kept up with other versions of vCenter Server. Use at your own risk.
+
 # Prerequisites
 This module requires additional modules to be loaded to work properly. If the modules are not installed the Install-vCSA module will not load until the modules listed below are loaded.
 
