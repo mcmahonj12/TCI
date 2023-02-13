@@ -1,4 +1,4 @@
-function Deploy-TCA{
+function Install-TCA{
   <#
   .SYNOPSIS
   This PowerCLI cmdlet create a PowerCli object OvfConfiguration specifically designed to be used when importing the VMware-Telco-Cloud-Automation-2.1.0-20142564 ovf/ova package with the Import-VApp cmdlet.
