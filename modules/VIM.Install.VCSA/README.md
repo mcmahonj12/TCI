@@ -1,17 +1,29 @@
 # Install vCenter Server Appliance
-A common challenge for a long time has been the inability to use PowerCLI to deploy vCenter Server appliances in a fully automated manner. Deploying the vCenter Server OVA would halt the deployment at Stage 2 requiring manual intervention from there.
+Use PowerCLI to deploy vCenter Server appliances in a fully automated manner without the ISO or CLI. Deploying the vCenter Server OVA with Import-vApp or New-VM would halt the deployment at Stage 2 requiring manual intervention from there.
 
-In some cases it may be required to install many vCenter Server appliances rapidly at a desired scale, or deploy new appliances to rehydrate their configurations and a restoration method. Some use cases include:
-- Lab redeploys
-- Mass production deployments to management clusters
-- Deployment without the requirement for other automation tools
-
-Install-vCSA solves this problem by enabling the ability to load a module into a PowerShell session and use it to deploy any desired number of vCSA appliances using a JSON payload and OVA.
+Install-vCSA enables the ability to load a module into a PowerShell session and use it to deploy any desired number of vCSA appliances using a JSON payload and OVA.
 
 The module has a 25 minute timeout built into it. The timeout is so long because it can take as long as 20 minutes to perform a full configuration or the appliance.
 
+## Purpose
+VCF or VMC environments are my primary targets so a way to avoid the need to put a Jump Host inside the environment is highly desired. You cannot simply deploy VCSA to VMC without jumping through some hoops first. William Lam documents the issue on his blog well: https://williamlam.com/2019/05/deploying-a-vcenter-server-appliance-vcsa-in-vmc.html
+
+I use this module to get around the VMC permissions challenge. No request for a Jump Host, complaining about it for 2 weeks before doing it anyway, and then taking another week to get access to it to deploy one or two VCSA's. I understand the security reasons in regards to openeing firewalls or mounting ISOs so this module helps lighten the conversation. Now you need the OVA in the target vCenter(s) and a terminal with 443 access to those VCs and PowerShell. Personally I've saved hours upon hours of time with this module deploying vCenter Server appliances especially for larger contexts.
+
+The CLI can be exported from the ISO and placed on a terminal somewhere. It will perform "mass" deployments but in an asyrchronous form. With this module I have been able to create a PowerShell job and deploy as many vCenter Servers as are configuration JSONs in a folder at the same time in the same amount of time as a single VC deployment.
+
+## Use Cases
+In some cases it may be required to install many vCenter Server appliances rapidly at a desired scale, or deploy new appliances to rehydrate their configurations as a restoration method. Some use cases include:
+- Lab redeploys
+- Mass deployments to management clusters
+- Deployment without the requirement for other automation tools
+- Deploy vCenter Server from a limited permissions VDI or terminal session (no permissions to mount an ISO)
+- You prefer to use PowerShell
+
 # Support
-This module is not supported by VMware or myself. Itmay not be kept up with other versions of vCenter Server. Use at your own risk.
+This module is not supported by VMware or myself. It may not be kept up with other versions of vCenter Server. Use at your own risk. Always try to use vendor supported solutions first. VMware recommends using the vCenter CLI or UI installer found on the vCenter Server installation ISO.
+
+While there are some basic error handling capabilities in this module it's by no means perfect. This module cannot provide a level of troubleshooting detail the CLI installer can using OVFTool.
 
 # Prerequisites
 This module requires additional modules to be loaded to work properly. If the modules are not installed the Install-vCSA module will not load until the modules listed below are loaded.
