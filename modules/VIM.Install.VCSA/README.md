@@ -8,7 +8,7 @@ The module has a 25 minute timeout built into it. The timeout is so long because
 ## Purpose
 VCF or VMC environments are my primary targets so a way to avoid the need to put a Jump Host inside the environment is highly desired. You cannot simply deploy VCSA to VMC without jumping through some hoops first. William Lam documents the issue on his blog well: https://williamlam.com/2019/05/deploying-a-vcenter-server-appliance-vcsa-in-vmc.html
 
-I use this module to get around the VMC permissions challenge. No request for a Jump Host, complaining about it for 2 weeks before doing it anyway, and then taking another week to get access to it to deploy one or two VCSA's. I understand the security reasons in regards to openeing firewalls or mounting ISOs so this module helps lighten the conversation. Now you need the OVA in the target vCenter(s) and a terminal with 443 access to those VCs and PowerShell. Personally I've saved hours upon hours of time with this module deploying vCenter Server appliances especially for larger contexts.
+I use this module to get around the VMC permissions challenge as well as mitigate security concerns with unmanaged Jump Hosts and ISO mount permissions.
 
 The CLI can be exported from the ISO and placed on a terminal somewhere. It will perform "mass" deployments but in an asyrchronous form. With this module I have been able to create a PowerShell job and deploy as many vCenter Servers as are configuration JSONs in a folder at the same time in the same amount of time as a single VC deployment.
 
@@ -63,6 +63,9 @@ The following procedure will assist with the usage of the Install-vCSA module to
 The json configuration is based on the vmware-installer-cli tool found in the vCenter Server ISO. You may use the "Deployment Configuration Parameters" article for help making the necessary changes for your requirements: https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vcenter.install.doc/GUID-457EAE1F-B08A-4E64-8506-8A3FA84A0446.html
 
 An example JSON can be found in \config\vcenter\appliances.
+
+## Usage
+Install-vCSA -JSONPath $file -$OVAName "vCenter-Server-Appliance-7"
 
 ## Install vCenter Server
 1. Download the project folder structure. Use your favorit git platform or the GitHub Desktop.

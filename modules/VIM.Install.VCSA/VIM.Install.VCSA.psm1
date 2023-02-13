@@ -26,15 +26,15 @@ http://pubs.vmware.com/vsphere-55/index.jsp#com.vmware.powercli.cmdletref.doc/Ge
 Link for a good overview of get-ovfconfiguration
 http://blogs.vmware.com/PowerCLI/2014/09/powercli-5-8-new-feature-get-ovfconfiguration-part-1-2.html
 
-.PARAMETER json
-Specifies the json payload to be used to deploy a vCenter Server appliance. This payload is used to create the OVF properties object.
+.PARAMETER jsonpath
+Specifies the file path to the json payload to be used to deploy a vCenter Server appliance. This payload is used to create the OVF properties object.
 
 .PARAMETER ovfpath
 Specifies the OVF or OVA package name stored in the destination vCenter Server Content Library for which the user-configurable options are returned. 
 URL paths are not supported.
 
 .EXAMPLE
-Install-vCSA -JSON $json -$OVAName "vCenter-Server-Appliance-7"
+Install-vCSA -JSONPath $file -$OVAName "vCenter-Server-Appliance-7"
 #>
 	<#param(
 	$Common_guestinfo_cis_appliance_net_addr_family,
@@ -69,7 +69,7 @@ Install-vCSA -JSON $json -$OVAName "vCenter-Server-Appliance-7"
     param(
 	  ## Specifies the json payload to be used to create an OVF properties object.
       [Parameter(Mandatory = $true)]
-      [string]$JSON,
+      [string]$JSONPath,
 	  
 	  ## Specifies the name of the OVA used to deploy the vCenter Server appliance.
 	  [Parameter(Mandatory = $true)]
@@ -138,7 +138,7 @@ Install-vCSA -JSON $json -$OVAName "vCenter-Server-Appliance-7"
 	
 	# Get JSON parameters from the specified config file which should be set in the OVF parameters hashtable.
 	# If the path does not exist or the path is not a JSON exit the script with an error.
-	<#Try {
+	Try {
 		if (Resolve-Path $JSONPath -ErrorAction Stop) {
 			if (([IO.Path]::GetExtension($JSONPath)) -ne ".json") {
 				Write-Warning "The file extension specified is not supported. Retry the deployment with a .json extension. Stopping the script."
@@ -147,13 +147,13 @@ Install-vCSA -JSON $json -$OVAName "vCenter-Server-Appliance-7"
 		$paramDataJSON = Get-Content -Path $JSONPath | Out-String
 	}
 	Catch {
-		Write-Warning "The file path $jsonpath does not exist. Please retry the deployment with another path to the vCenter Server configuration JSON."
-	}#>
+		Write-Warning "The file path $JSONPath does not exist. Please retry the deployment with another path to the vCenter Server configuration JSON."
+	}
       #$paramDataJSON = Get-Content -Path $JSONPath | Out-String
 	# Try to convert the json file to a PowerShell object. If the file is not a valid JSON, exit the script.
 	Try {
-		#$paramData = ConvertFrom-Json -InputObject $paramDataJSON -ErrorAction Stop
-		$paramData = ConvertFrom-Json -InputObject $JSON -ErrorAction Stop
+		$paramData = ConvertFrom-Json -InputObject $paramDataJSON -ErrorAction Stop
+		#$paramData = ConvertFrom-Json -InputObject $JSON -ErrorAction Stop
 	}
 	Catch {
 		Write-Warning "Could not convert the JSON file specified. $_"
@@ -182,7 +182,6 @@ Install-vCSA -JSON $json -$OVAName "vCenter-Server-Appliance-7"
       # Set OVF parameters for the VM deployment
       $ovfParam = Set-OvfParameters $paramData $ovf
 	      
-     
 	 # VM configuration hashtable. Used to deploy a new VM.
       $sVApp = @{
         Name              = $paramData.new_vcsa.appliance.name
