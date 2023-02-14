@@ -116,18 +116,14 @@ function Install-TCA{
     [Parameter(Mandatory = $true)]
     [string]$JSONPath,
   
-  ## Specifies the name of the OVA used to deploy the vCenter Server appliance.
+  ## Specifies the name of the OVA used to deploy the Telco Cloud Automation appliance.
     [Parameter(Mandatory = $true)]
     [string]$OVAName
   )
 
 # Function sets the ovf properties from the specified JSON configuration file. Will only set those which contain data in the JSON.
-  function Set-OvfParameters {
-      param (
-          $params
-      )    
+function Set-OvfParameters($params, $OvfConfiguration) {  
   
-    
       process{
       #Get ovf configuration from a local file
       #$OvfConfiguration = Get-OvfConfiguration -Ovf $params.vSphere.ovapath
@@ -206,7 +202,7 @@ function Install-TCA{
     # Get JSON parameters from the specified config file which should be set in the OVF parameters hashtable.
     Try {
       #$paramData = ConvertFrom-Json -InputObject $paramDataJSON -ErrorAction Stop
-      $paramData = ConvertFrom-Json -InputObject $JSON -ErrorAction Stop
+      $paramData = ConvertFrom-Json -InputObject $JSONPath -ErrorAction Stop
     }
     Catch {
       Write-Warning "Could not convert the JSON file specified. $_"
