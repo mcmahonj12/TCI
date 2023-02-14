@@ -3,7 +3,7 @@ Use PowerCLI to deploy vCenter Server appliances in a fully automated manner wit
 
 Install-vCSA enables the ability to load a module into a PowerShell session and use it to deploy any desired number of vCSA appliances using a JSON payload and OVA.
 
-The module has a 25 minute timeout built into it. The timeout is so long because it can take as long as 20 minutes to perform a full configuration or the appliance.
+The module has a 25 minute timeout built into it. The timeout is so long because it can take as long as 20 minutes to perform a full configuration of the appliance.
 
 ## Purpose
 VCF or VMC environments are my primary targets so a way to avoid the need to put a Jump Host inside the environment is highly desired. You cannot simply deploy VCSA to VMC without jumping through some hoops first. William Lam documents the issue on his blog well: https://williamlam.com/2019/05/deploying-a-vcenter-server-appliance-vcsa-in-vmc.html
