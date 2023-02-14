@@ -116,27 +116,27 @@ function Install-TCA{
     [Parameter(Mandatory = $true)]
     [string]$JSONPath,
   
-<<<<<<< HEAD
-  ## Specifies the name of the OVA used to deploy the Telco Cloud Automation appliance.
-=======
+<<<<<<<<< Temporary merge branch 1
   ## Specifies the name of the OVA used to deploy the vCenter Server appliance.
->>>>>>> main
+=========
+  ## Specifies the name of the OVA used to deploy the Telco Cloud Automation appliance.
+>>>>>>>>> Temporary merge branch 2
     [Parameter(Mandatory = $true)]
     [string]$OVAName
   )
 
 # Function sets the ovf properties from the specified JSON configuration file. Will only set those which contain data in the JSON.
-<<<<<<< HEAD
-function Set-OvfParameters($params, $OvfConfiguration) {  
-  
-=======
+<<<<<<<<< Temporary merge branch 1
   function Set-OvfParameters {
       param (
           $params
       )    
   
     
->>>>>>> main
+=========
+function Set-OvfParameters($params, $OvfConfiguration) {  
+  
+>>>>>>>>> Temporary merge branch 2
       process{
       #Get ovf configuration from a local file
       #$OvfConfiguration = Get-OvfConfiguration -Ovf $params.vSphere.ovapath
@@ -215,11 +215,11 @@ function Set-OvfParameters($params, $OvfConfiguration) {
     # Get JSON parameters from the specified config file which should be set in the OVF parameters hashtable.
     Try {
       #$paramData = ConvertFrom-Json -InputObject $paramDataJSON -ErrorAction Stop
-<<<<<<< HEAD
-      $paramData = ConvertFrom-Json -InputObject $JSONPath -ErrorAction Stop
-=======
+<<<<<<<<< Temporary merge branch 1
       $paramData = ConvertFrom-Json -InputObject $JSON -ErrorAction Stop
->>>>>>> main
+=========
+      $paramData = ConvertFrom-Json -InputObject $JSONPath -ErrorAction Stop
+>>>>>>>>> Temporary merge branch 2
     }
     Catch {
       Write-Warning "Could not convert the JSON file specified. $_"
