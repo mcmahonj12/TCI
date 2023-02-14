@@ -1,0 +1,14 @@
+[
+	{
+		"Name": "frankenlab.foobar",
+		"DomainName": "frankenlab.foobar",
+		"DomainAlias": "frankenlab",
+		"PrimaryUrl": "ldap://frankenlab.foobar",
+		"FailoverUrl": "",
+		"BaseDNUsers": "ou=Users,ou=frankenlab,dc=frankenlab,dc=cloud",
+		"BaseDNGroups": "ou=Groups,ou=frankenlab,dc=frankenlab,dc=cloud",
+		"BindUser": "svc_mktvcldap@frankenlab.foobar",
+		"BindPassword": "L@n@ its c@shm3r3 th3r3 @r3 rul3s",
+		"Certificates": ""
+	}
+]
