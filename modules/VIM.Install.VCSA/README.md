@@ -98,6 +98,8 @@ $ova = "VMware-vCenter-Server-Appliance-7.0.3.01000-20395099_OVF10"
 ```
 8. Deploy your vCenter Server using the vCenter Server json payload created earlier:
 ```
+PS C:\Windows\system32> Install-vCSA -JSONPath $json -OVAPath $ova
+
 Name                 PowerState Num CPUs MemoryGB
 ----                 ---------- -------- --------
 vcsa                 PoweredOff 4        19.000
