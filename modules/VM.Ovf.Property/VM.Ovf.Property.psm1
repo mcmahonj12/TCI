@@ -1,5 +1,5 @@
 Function Set-VMOvfProperty {
-<#
+    <#
 	.SYNOPSIS
 		Update VM OVF propterties.
     .NOTES
@@ -41,8 +41,8 @@ Function Set-VMOvfProperty {
         Set-VMOvfProperty -VM (Get-VM -Name "vesxi65-1-1") -ovfChanges $ovfPropertyChanges
 #>
     param(
-        [Parameter(Mandatory=$true)]$VM,
-        [Parameter(Mandatory=$true)]$ovfChanges
+        [Parameter(Mandatory = $true)]$VM,
+        [Parameter(Mandatory = $true)]$ovfChanges
     )
 
     # Retrieve existing OVF properties from VM
@@ -55,14 +55,14 @@ Function Set-VMOvfProperty {
 
     # Find OVF property Id and update the Update Spec
     foreach ($vappProperty in $vappProperties) {
-        if($ovfChanges.ContainsKey($vappProperty.Id)) {
+        if ($ovfChanges.ContainsKey($vappProperty.Id)) {
             $tmp = New-Object VMware.Vim.VAppPropertySpec
             $tmp.Operation = "edit"
             $tmp.Info = New-Object VMware.Vim.VAppPropertyInfo
             $tmp.Info.Key = $vappProperty.Key
-			$tmp.Info.UserConfigurable = $True
+            $tmp.Info.UserConfigurable = $True
             $tmp.Info.value = $ovfChanges[$vappProperty.Id]
-            $propertySpec+=($tmp)
+            $propertySpec += ($tmp)
         }
     }
     $spec.VAppConfig.Property = $propertySpec
@@ -74,7 +74,7 @@ Function Set-VMOvfProperty {
 }
 
 Function Get-VMOvfProperty {
-<#
+    <#
 	.SYNOPSIS
 		Get VM OVF propterties.
     .NOTES
@@ -92,19 +92,19 @@ Function Get-VMOvfProperty {
         #Get-VMOvfProperty -VM (Get-VM -Name "vesxi65-1-1")
 #>
     param(
-        [Parameter(Mandatory=$true)]$VM
+        [Parameter(Mandatory = $true)]$VM
     )
     $vappProperties = $VM.ExtensionData.Config.VAppConfig.Property
 
     $results = @()
     foreach ($vappProperty in $vappProperties | Sort-Object -Property Id) {
         $tmp = [pscustomobject] @{
-            Id = $vappProperty.Id;
-            Label = $vappProperty.Label;
-            Value = $vappProperty.Value;
+            Id          = $vappProperty.Id;
+            Label       = $vappProperty.Label;
+            Value       = $vappProperty.Value;
             Description = $vappProperty.Description;
         }
-        $results+=$tmp
+        $results += $tmp
     }
     $results
 }
